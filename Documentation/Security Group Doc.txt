@@ -1,0 +1,5 @@
+Domain name: NMG.com
+OUs created: Finance, HR, IT, Operations
+Security groups created: Finance-Users, HR-Users, IT-Users, Operations-Users
+Purpose of each OU: Each department represents a folder where a user lives within an organization(their location). The security group is what they're a member of (their access level).
+Date completed: September 14, 2026.

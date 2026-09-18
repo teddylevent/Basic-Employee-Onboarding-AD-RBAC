@@ -1,0 +1,4 @@
+Domain name: NMG.com
+Domain Controller name: NMG-DC01
+Static IP: 192.168.64.5
+Date completed: September 14, 2026
