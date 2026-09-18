@@ -25,7 +25,6 @@ I built the `NMG.com` domain on the `NMG-DC01` domain controller and organized e
 | Windows PowerShell / Active Directory module | Read-only verification of the completed directory |
 | Group Policy | OU scope concepts and inspection of existing GPOs |
 | RBAC | Departmental role and group design |
-| Git and GitHub | Versioned portfolio documentation |
 
 ## Project Timeline
 
