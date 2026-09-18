@@ -54,9 +54,8 @@ I built the `NMG.com` domain on the `NMG-DC01` domain controller and organized e
 ## What I Would Do Differently in Production
 
 
-1. Access reviews should be scheduled.
 
-2. Onboarding should be automated with scripting, not manually entered. A script that uses the department as an input to automatically determine the correct OU, user attributes, and group memberships would prevent users from being placed in the wrong OU.
+1. Onboarding should be automated with scripting, not manually entered. A script that uses the department as an input to automatically determine the correct OU, user attributes, and group memberships would prevent users from being placed in the wrong OU.
    
-3. Having a single domain controller equals a single point of failure. A second domain controller would provide redundancy.
+2. Having a single domain controller equals a single point of failure. A second domain controller would provide redundancy.
 
