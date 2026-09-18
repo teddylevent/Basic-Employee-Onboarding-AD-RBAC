@@ -22,7 +22,6 @@ I built the `NMG.com` domain on the `NMG-DC01` domain controller and organized e
 | Active Directory Domain Services | Domain, employee identities, OUs, and security groups |
 | Active Directory Users and Computers | Account provisioning and incident remediation |
 | UTM on macOS | Virtual machine hosting |
-| Windows PowerShell / Active Directory module | Read-only verification of the completed directory |
 | Group Policy | OU scope concepts and inspection of existing GPOs |
 | RBAC | Departmental role and group design |
 
