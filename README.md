@@ -4,7 +4,6 @@ An Active Directory and identity access management lab for **Northstar Medical G
 
 **15 employee accounts · 4 departments · 4 security groups · 1 resolved identity configuration incident**
 
-Built in UTM on Windows Server 2025 Standard. Lab work completed September 14–17, 2026; portfolio and directory verification completed September 18, 2026.
 
 ## Problem Statement
 
