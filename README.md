@@ -7,11 +7,11 @@ An Active Directory and identity access management lab for **Northstar Medical G
 
 ## Problem Statement
 
-The fictional Northstar Medical Group inherited disorganized identity administration from its managed service provider (MSP). Manual onboarding, inconsistent account attributes, and missing departmental structure made access assignments difficult to maintain and review. In a healthcare setting, that scenario creates concerns about inappropriate access to sensitive information and HIPAA-related risk. This lab models the identity configuration work needed to address those problems; it does not represent a production healthcare deployment or a compliance assessment.
+The fictional Northstar Medical Group inherited disorganized identity administration from its managed service provider (MSP). Manual onboarding, inconsistent account attributes, and missing departmental structure made access assignments difficult to maintain and review. In a healthcare setting, that scenario creates concerns about inappropriate access to sensitive information and HIPAA-related risk. This lab models the identity configuration work needed to address those problems.
 
 ## Solution Overview
 
-I built the `NMG.com` domain on the `NMG-DC01` domain controller and organized employee accounts into Finance, HR, IT, and Operations OUs. I created one global security group per department to establish a simple, flat RBAC model. I provisioned 15 fictional employee identities using consistent usernames, UPNs, departments, and job titles. I investigated ticket `NMG-0047` and corrected Jane Cooper's OU placement, departmental group membership, and HR profile attributes. The resulting directory provides a consistent foundation for assigning resource permissions through groups, with the configuration and verification documented in this repository.
+I built the `NMG.com` domain on the `NMG-DC01` domain controller and organized employee accounts into Finance, HR, IT, and Operations OUs. I created one global security group per department to establish a simple, flat RBAC model. I provisioned 15 fictional employee identities using consistent usernames, UPNs, departments, and job titles. I investigated ticket `NMG-0047` and corrected Jane Cooper's OU placement, departmental group membership, and HR profile attributes. The directory provides a consistent foundation for assigning resource permissions through groups.
 
 
 ## Tools Used
@@ -21,7 +21,7 @@ I built the `NMG.com` domain on the `NMG-DC01` domain controller and organized e
 | Windows Server 2025 Standard | Domain controller operating system |
 | Active Directory Domain Services | Domain, employee identities, OUs, and security groups |
 | Active Directory Users and Computers | Account provisioning and incident remediation |
-| UTM on macOS | Virtual machine hosting |
+| UTM on macOS | Virtual machine |
 | Group Policy | OU scope concepts and inspection of existing GPOs |
 | RBAC | Departmental role and group design |
 
@@ -38,10 +38,9 @@ I built the `NMG.com` domain on the `NMG-DC01` domain controller and organized e
 ## Key Accomplishments
 
 - Built a working lab domain with a dedicated domain controller.
-- Established a clear four-department OU and security group structure.
+- Established a four-department OU and security group structure.
 - Provisioned and documented all 15 employee identities.
-- Resolved both the incorrect OU placement and incorrect departmental membership in the Jane Cooper scenario.
-- Reconciled the original Day 3 roster with the corrected Day 4 state: HR increased from three to four users, and Operations decreased from four to three.
+- Resolved both the incorrect OU placement and incorrect department membership in the Jane Cooper scenario.
 - Verified account attributes, OU placement, and departmental memberships directly in the running VM.
 
 
