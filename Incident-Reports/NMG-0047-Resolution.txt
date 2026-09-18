@@ -1,0 +1,68 @@
+NMG-0047 - Identity Configuration Resolution
+
+Scenario: Fictional Northstar Medical Group lab
+Affected user: Jane Cooper (jcooper@NMG.com)
+Expected role: HR Payroll Specialist
+Date resolved in original notes: September 17, 2026
+Resolved by: IT New Hire (lab role)
+Directory configuration rechecked: September 18, 2026
+
+ISSUE REPORTED
+Jane could sign in but received Access Denied when attempting to use HR shared
+resources. Her desktop policies, mapped drives, and restrictions differed from
+her HR teammates. The simulated ticket recorded that the password had been
+checked, two restarts had not helped, and other HR users were unaffected.
+
+INVESTIGATION AND ROOT CAUSE
+Jane's account was located in the Operations OU. Her displayed memberships
+included Domain Users and Operations-Users, with HR-Users missing. Those
+departmental assignments did not match her HR Payroll Specialist role.
+
+Two configuration issues required correction:
+1. Incorrect organizational placement: Operations instead of HR.
+2. Incorrect departmental membership: Operations-Users instead of HR-Users.
+
+An incorrect group membership can explain an access failure when the target
+resource grants permissions to the expected group. Incorrect OU placement can
+affect applicable user policy when relevant GPOs are linked and in scope.
+These are separate mechanisms; group membership does not automatically select
+a departmental GPO, and an OU move alone does not grant resource access.
+
+FIX APPLIED
+- Moved Jane's account from the Operations OU to the HR OU.
+- Removed Operations-Users membership.
+- Added HR-Users membership while retaining Domain Users.
+- Updated department to HR and job title to HR Payroll Specialist.
+- Set her manager to Sandra Torres and company to NMG.
+
+VERIFICATION
+The retained local evidence shows Jane in the HR OU and her Member Of tab
+showing Domain Users and HR-Users, with Operations-Users removed.
+
+Read-only checks on September 18 independently confirmed:
+- Distinguished name: CN=Jane Cooper,OU=HR,DC=NMG,DC=com
+- Department: HR
+- Title: HR Payroll Specialist
+- Departmental MemberOf value: CN=HR-Users,OU=HR,DC=NMG,DC=com
+- Manager: CN=Sandra Torres,OU=HR,DC=NMG,DC=com
+
+The original Day 4 notes record that Jane restarted, signed in again, and
+confirmed that access and her desktop experience were corrected. This remains
+a reported outcome within the simulated ticket. End-to-end resource access,
+share permissions, mapped drives, and resultant workstation policy were not
+independently tested for this portfolio.
+
+The Day 5 GPO inventory showed only Default Domain Policy and Default Domain
+Controllers Policy. Accordingly, this report establishes the corrected
+identity configuration and does not claim a verified departmental GPO rollout.
+
+PREVENTION
+Use a documented onboarding review that checks the employee's department,
+title, manager, OU, and approved group memberships together. After a transfer
+or correction, remove obsolete memberships and test the required resources
+from the user's session before treating access restoration as fully verified.
+
+PUBLICATION NOTE
+This is an edited portfolio version of the lab author's resolution notes.
+Spelling and structure were improved, and observed results were separated from
+reported or untested outcomes. No course documents or screenshots are included.

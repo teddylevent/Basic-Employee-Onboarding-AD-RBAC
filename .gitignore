@@ -1,0 +1,17 @@
+# Publish only the reviewed portfolio files. Everything else is excluded.
+*
+!.gitignore
+!README.md
+!Documentation/
+Documentation/*
+!Documentation/Domain Config File.md
+!Documentation/Security Group Doc.md
+!Documentation/User List Documentation.md
+!Documentation/RBAC-Structure.md
+!Documentation/Verification.md
+!Incident-Reports/
+Incident-Reports/*
+!Incident-Reports/NMG-0047-Resolution.txt
+!Screenshots/
+Screenshots/*
+!Screenshots/README.md
