@@ -49,7 +49,9 @@ I built the `NMG.com` domain on the `NMG-DC01` domain controller and organized e
 
 **Walkthrough link: coming soon.** The video has not been recorded or published yet.
 
-**What I Would Do Differently in Production**
+
+
+## What I Would Do Differently in Production
 
 
 1. Access reviews should be scheduled.
