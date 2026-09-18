@@ -33,7 +33,7 @@ I built the `NMG.com` domain on the `NMG-DC01` domain controller and organized e
 | Day 2 — Directory organization | September 14, 2026 | Created four departmental OUs and four security groups |
 | Day 3 — User provisioning | September 15, 2026 | Created 15 accounts and assigned departmental memberships |
 | Day 4 — Incident response | September 17, 2026 | Corrected Jane Cooper's identity configuration for ticket `NMG-0047` |
-| Day 5 — Portfolio packaging | September 18, 2026 |
+
 
 ## Key Accomplishments
 
